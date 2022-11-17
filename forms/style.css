@@ -1,0 +1,120 @@
+
+
+
+.forms{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-end;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.s_race select{
+padding: 10px 40px;
+border: 3px solid rgb(201, 145, 12);
+color: rgb(201, 145, 12);
+font-size: 30px;
+appearance: none;
+cursor: pointer;
+}
+.s_race{
+position: relative;
+display: inline-block;
+}
+
+.s_race:after{
+content: "⬇";
+position: absolute;
+font-size: 50px;
+right: 5px;
+top: -5px;
+color: rgb(201, 145, 12);
+pointer-events: none;
+}
+
+
+
+
+
+.number{
+position: relative;
+display: inline-block;
+}
+input{
+padding: 10px 10px;
+border: 3px solid rgb(201, 145, 12);
+color: rgb(201, 145, 12);
+}
+.number:before,
+.number:after{
+position: absolute;
+width: 10px;
+right: 10px;
+color: rgb(201, 145, 12);
+pointer-events: none;
+}
+.number:before{
+content: "+";
+top: 6px;
+right: 14px;
+}
+.number:after{
+content: "-";
+top: 15px;
+right: 13px;
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button{  
+opacity: 0;
+cursor: pointer;
+}
+input::placeholder{
+color: rgb(201, 145, 12);
+font-size: 16px;
+opacity: .4;
+}
+
+
+
+
+
+.checkbox{
+    position: relative;
+}
+
+.checkbox input{
+    height: 54px;
+    width:200px;
+    left: 0;
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.checkbox label{
+    display: block;
+    width: 200px;
+    height: 52px;
+    background-color: white;
+    border: 3px solid rgb(201, 145, 12);
+    border-radius: 55px;
+}
+
+.checkbox label:before{
+    content: '';
+    width: 50px;
+    height: 50px;
+    position: relative;
+    border-radius: 50%;
+    background: rgb(201, 145, 12);
+    display: block;
+    top: 1px;
+    left: 1px;
+    transition: left .2s linear;
+    pointer-events: none;
+}
+
+.checkbox input:checked + label:before{
+    left: 150px;
+}
